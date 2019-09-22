@@ -6,7 +6,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    """Return homepage."""
+    return render_template("index.html")
+
+# @app.route('/')
+# def test_html():
+
+
+
+    # """Return homepage."""
     # TODO: Extract the query term from url using request.args.get()
 
     # TODO: Make 'params' dictionary containing:
@@ -27,7 +34,7 @@ def index():
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-    return render_template("index.html")
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
