@@ -1,0 +1,19 @@
+<head>
+    <title>Gifs</title>
+    <link rel="stylesheet" href="../static/gifs.css">
+</head>
+{% block content %}
+    {% if gifs %}
+    <h1>10 Fetched Gifs</h1>
+    <ul>
+        {% for gif in gifs %}
+            <img src="{{ gif }}">
+            <br>
+            {% endfor %}
+    </ul>
+    {% else %}
+        <h1>Something went wrong fetching the gifs...</h1>
+    {% endif %}
+
+
+{% endblock %}

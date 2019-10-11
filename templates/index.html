@@ -1,16 +1,22 @@
-<!-- templates/index.html -->
-
-
-<!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
 {% extends "base.html" %}
 
-<!-- TODO: Make an HTML form containing a search box and a submit button to add
-    the search term to the query string. The form should have a target of '/' to
-    send us to the same route. -->
-{% block body %}
-<p>erik</p>
-{% endblock body %}
-<!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
+{% block title %} Index {% endblock title %}
 
-<!-- TODO: For each gif, include the 'gif.html' template to display it -->
-frvrf
+{% block head %} 
+  {{ super() }}
+  <script src="//http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <style type="text/css"></style>
+{% endblock head %}
+
+<h1>Gif Search</h1>
+{% block body %}
+
+<div class=form>
+      <form name="search" action='/get_gifs' method="get">
+          <input class="searchBar" type="text" placeholder="Search.." name="search">
+              <button class="submitBtn" type="submit" value="Search">Search</button>
+      </form>
+  </div>
+
+{% endblock body %}
+
