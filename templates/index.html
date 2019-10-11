@@ -6,11 +6,12 @@
   {{ super() }}
   <script src="//http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <style type="text/css"></style>
+  <link rel="stylesheet" type="text/css" href="/static/index.css">
 {% endblock head %}
 
-<h1>Gif Search</h1>
-{% block body %}
 
+{% block body %}
+<h1 style="color: white;">Gif Search</h1>
 <div class=form>
       <form name="search" action='/get_gifs' method="get">
           <input class="searchBar" type="text" placeholder="Search.." name="search">

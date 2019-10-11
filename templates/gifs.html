@@ -4,10 +4,11 @@
 </head>
 {% block content %}
     {% if gifs %}
-    <h1>10 Fetched Gifs</h1>
+    <h1 style="color: white;">10 Fetched Gifs</h1>
     <ul>
         {% for gif in gifs %}
             <img src="{{ gif }}">
+            <br>
             <br>
             {% endfor %}
     </ul>
